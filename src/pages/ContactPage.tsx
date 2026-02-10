@@ -1,4 +1,4 @@
-import { useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import {
   MapPin,
   Phone,
@@ -11,22 +11,45 @@ import emailjs from '@emailjs/browser'
 
 const ContactPage = () => {
   const formRef = useRef<HTMLFormElement>(null)
+  const [loading, setLoading] = useState(false)
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  // EmailJS init (daha stabil)
+  useEffect(() => {
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+    if (publicKey) emailjs.init(publicKey)
+  }, [])
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    if (!formRef.current) return
+    if (!formRef.current || loading) return
 
-    emailjs
-      .sendForm('SERVICE_ID', 'TEMPLATE_ID', formRef.current, 'PUBLIC_KEY')
-      .then(
-        () => {
-          alert('Talebiniz başarıyla gönderildi.')
-          formRef.current?.reset()
-        },
-        () => {
-          alert('Bir hata oluştu. Lütfen tekrar deneyin.')
-        }
-      )
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
+
+    if (!serviceId || !templateId) {
+      alert('EmailJS ayarları eksik. .env dosyanızı kontrol edin.')
+      return
+    }
+
+    try {
+      setLoading(true)
+
+      // init ile publicKey verdik, burada 4. parametreye gerek yok
+      await emailjs.sendForm(serviceId, templateId, formRef.current)
+
+      alert('Talebiniz başarıyla gönderildi.')
+      formRef.current.reset()
+    } catch (err: any) {
+      // Burayı özellikle detaylandırdım: gerçek hatayı gör
+      console.error('EmailJS sendForm error:', err)
+      const msg =
+        err?.text ||
+        err?.message ||
+        'Bir hata oluştu. Lütfen tekrar deneyin.'
+      alert(msg)
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
@@ -119,9 +142,14 @@ const ContactPage = () => {
                 {/* Submit Button */}
                 <button
                   type="submit"
-                  className="w-full h-12 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-[14px] transition-all duration-[600ms]"
+                  disabled={loading}
+                  className={`w-full h-12 text-white font-semibold rounded-[14px] transition-all duration-[600ms] ${
+                    loading
+                      ? 'bg-orange-400 cursor-not-allowed'
+                      : 'bg-orange-500 hover:bg-orange-600'
+                  }`}
                 >
-                  Talep Gönder
+                  {loading ? 'Gönderiliyor...' : 'Talep Gönder'}
                 </button>
 
                 <p className="text-xs text-gray-500 leading-relaxed">
@@ -140,7 +168,7 @@ const ContactPage = () => {
                   Hızlı İletişim
                 </h3>
                 <a
-                  href="https://wa.me/905349765239?text=Merhaba%20Üçgül%20Makina,%20endüstriyel%20üretim%20ve%20makine%20çözümleriniz%20hakkında%20bilgi%20ve%20teklif%20almak%20için%20web%20siteniz%20üzerinden%20iletişime%20geçiyorum."
+                  href="https://wa.me/905355442304?text=Merhaba%20Üçgül%20Makina,%20endüstriyel%20üretim%20ve%20makine%20çözümleriniz%20hakkında%20bilgi%20ve%20teklif%20almak%20için%20web%20siteniz%20üzerinden%20iletişime%20geçiyorum."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 w-full h-12 bg-green-500 hover:bg-green-600 text-white font-medium rounded-xl transition-all duration-[600ms] group hover:scale-[1.02]"
@@ -156,12 +184,9 @@ const ContactPage = () => {
                 </p>
               </div>
 
-              {/* Divider */}
               <div className="border-t border-gray-100"></div>
 
-              {/* Contact Details */}
               <div className="space-y-6">
-                {/* Address */}
                 <a
                   href="https://maps.app.goo.gl/Xmai1MvgRopVVA7N8"
                   target="_blank"
@@ -183,7 +208,6 @@ const ContactPage = () => {
                   </div>
                 </a>
 
-                {/* Phone */}
                 <a href="tel:+903223213270" className="flex items-start gap-3 group">
                   <div className="w-9 h-9 bg-orange-50 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:bg-orange-100 transition-colors">
                     <Phone size={16} className="text-orange-500" />
@@ -201,9 +225,8 @@ const ContactPage = () => {
                   </div>
                 </a>
 
-                {/* Email */}
                 <a
-                  href="mailto:m3gul@3gulmakina.com"
+                  href="mailto:ucgul3gul@gmail.com"
                   className="flex items-start gap-3 group"
                 >
                   <div className="w-9 h-9 bg-orange-50 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5 group-hover:bg-orange-100 transition-colors">
@@ -214,16 +237,14 @@ const ContactPage = () => {
                       E-posta
                     </h4>
                     <p className="text-sm text-gray-600 group-hover:text-[#E8612D] transition-colors">
-                      m3gul@3gulmakina.com
+                      ucgul3gul@gmail.com
                     </p>
                   </div>
                 </a>
               </div>
 
-              {/* Divider */}
               <div className="border-t border-gray-100"></div>
 
-              {/* Social Media */}
               <div>
                 <h3 className="text-sm font-semibold text-gray-900 mb-3">
                   Bizi Takip Edin
@@ -259,11 +280,6 @@ const ContactPage = () => {
             </div>
           </div>
         </div>
-
-        <p className="text-xs text-gray-500 mt-10">
-          Not: EmailJS ayarlarında SERVICE_ID, TEMPLATE_ID ve PUBLIC_KEY
-          değerlerini kendi hesabınızdan girmeniz gerekir.
-        </p>
       </div>
     </div>
   )

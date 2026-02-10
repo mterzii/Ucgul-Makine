@@ -31,7 +31,7 @@ const AboutPage = () => {
               </h2>
               <div className="space-y-4 text-gray-700 leading-relaxed">
                 <p>
-                  3Gül Makine 1972 de Fehmi Üçgül tarafından kurulmuş olup, çeşitli imalat kollarında faaliyet göstermiştir. <span className="font-semibold text-orange-600">"İnsana yarışır iş, güvenli istir"</span> anlayışından hareketle iş güvenliğini ön planda tutarak, kaliteden ödün vermeden ilerlemesini sürdürmüştür.
+                  3gül Makine 1972 de Fehmi Üçgül tarafından kurulmuş olup, çeşitli imalat kollarında faaliyet göstermiştir. <span className="font-semibold text-orange-600">"İnsana yarışır iş, güvenli istir"</span> anlayışından hareketle iş güvenliğini ön planda tutarak, kaliteden ödün vermeden ilerlemesini sürdürmüştür.
                 </p>
                 <p>
                   Firmamız teknolojiyi yakından takip etmekle birlikte her geçen gün büyümeyi hedeflemiştir. 2008 yılı itibari ile kurumsallaşmayı hedeflemiş ve gerçekleştirmiştir. 2000 yılı itibari ile Mustafa Üçgül'ün de katılımı ile işlerimize teknik bir bakış açısı kazandırılmıştır.

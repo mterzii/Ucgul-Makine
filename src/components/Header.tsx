@@ -1,7 +1,7 @@
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import UcgulLogo from '../Images/UcgulLogo.png'
+import UcgulLogo from '../Images/UcgulLogo.png';
 
 
 const Header = () => {
@@ -12,14 +12,16 @@ const Header = () => {
     <header className="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <Link to="/" className="flex items-center hover:opacity-80 transition-opacity">
+          <Link
+  to="/"
+  className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+>
   <img
     src={UcgulLogo}
-    alt="Üçgül Makina Logo"
-    className="h-10 w-auto object-contain"
+    alt="Üçgül Makine"
+    className="h-8 w-auto object-contain"
   />
 </Link>
-
 
           <nav className="hidden md:flex items-center gap-1">
             <Link
