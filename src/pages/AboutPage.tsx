@@ -43,7 +43,7 @@ const AboutPage = () => {
             </div>
             <div className="relative h-96 md:h-auto">
               <img
-                src="https://images.pexels.com/photos/1170412/pexels-photo-1170412.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src="https://r.resimlink.com/b51RBlJ.jpg"
                 alt="3Gül Makine Kurucuları"
                 className="w-full h-full object-cover"
               />

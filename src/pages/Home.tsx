@@ -223,7 +223,7 @@ const child: Variants = {
       >
         <div className="absolute inset-0 bg-gradient-to-r from-[#0f172a] via-[#0f172a]/80 to-[#0f172a]/30 z-10" />
         <img
-          src="https://images.pexels.com/photos/807598/pexels-photo-807598.jpeg"
+          src="https://images.pexels.com/photos/3361235/pexels-photo-3361235.jpeg"
           alt="Industrial Workshop"
           className="w-full h-full object-cover"
         />
@@ -542,7 +542,7 @@ const QualitySection = () => {
           >
             <div className="absolute inset-0 bg-[#E8612D] rounded-2xl transform translate-x-4 translate-y-4" />
             <img
-              src="https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1974&q=80"
+              src="https://images.pexels.com/photos/7097316/pexels-photo-7097316.jpeg"
               alt="Quality Control"
               className="rounded-2xl shadow-2xl relative z-10 w-full object-cover h-[500px]"
             />
@@ -804,7 +804,7 @@ const ProjectsAndActivities = () => {
               <div className="absolute -top-10 -right-10 w-40 h-40 bg-[#E8612D]/10 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
               <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-orange-400/10 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
               <img
-                src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+                src="https://images.pexels.com/photos/10406128/pexels-photo-10406128.jpeg"
                 alt="Teknik Çizim"
                 className="w-full h-[400px] object-cover rounded-2xl shadow-xl group-hover:scale-110 transition-transform duration-700"
               />
