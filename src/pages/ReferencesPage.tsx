@@ -33,14 +33,14 @@ const ReferencesPage = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-16">
           <div className="inline-block text-xs font-semibold text-orange-500 tracking-widest mb-4">
-            REFERANSLARIMIZ
+            REFERANSLARIMIZ 
           </div>
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-8">
-            Güvenilen Partner
+            Güvenilen Partner 
           </h1>
           <p className="text-xl text-gray-600 leading-relaxed max-w-3xl">
             50 yıldan uzun süredir Türkiye'nin önde gelen işletmeleri 3Gül Makine'ye güven duyarak,
-            üretimlerinde yer vermiştir. İşte bazı referanslarımız:
+            üretimlerinde yer vermiştir. İşte bazı referanslarımız: 
           </p>
         </div>
 
