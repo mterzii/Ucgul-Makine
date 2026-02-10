@@ -3,12 +3,12 @@ import { useScrollReveal } from '../hooks/useScrollReveal';
 import BOTAS from '../images/references/BOTAS.png';
 import DEMIRAGLAR from '../images/references/DEMIRAGLAR.jpg';
 import GUNEY_CELIK from '../images/references/guneycelik.png';
-import KOLIN from '../images/references/kolin.JPG';
+import KOLIN from '../images/references/kolin.jpg';
 import OTIS from '../images/references/OTIS.jpg';
 import OYAK from '../images/references/OYAK.jpg';
 import PAMUK_ELEKTRIK from '../images/references/pamukelektrik.png';
 import PIONEER from '../images/references/PIONEER.jpg';
-import WAVIN_PILSA from '../images/references/wavinpilsa.JPG';
+import WAVIN_PILSA from '../images/references/wavinpilsa.jpg';
 import YUREGIR_BELEDIYESI from '../images/references/yuregirbelediyesi.png';
 
 const references = [
