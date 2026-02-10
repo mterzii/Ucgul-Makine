@@ -1,15 +1,15 @@
 import { useScrollReveal } from '../hooks/useScrollReveal';
 
-import BOTAS from '../images/references/BOTAS.png';
-import DEMIRAGLAR from '../images/references/DEMIRAGLAR.jpg';
-import GUNEY_CELIK from '../images/references/guneycelik.png';
-import KOLIN from '../images/references/kolin.jpg';
-import OTIS from '../images/references/OTIS.jpg';
-import OYAK from '../images/references/OYAK.jpg';
-import PAMUK_ELEKTRIK from '../images/references/pamukelektrik.png';
-import PIONEER from '../images/references/PIONEER.jpg';
-import WAVIN_PILSA from '../images/references/wavinpilsa.jpg';
-import YUREGIR_BELEDIYESI from '../images/references/yuregirbelediyesi.png';
+import BOTAS from '../Images/references/BOTAS.png';
+import DEMIRAGLAR from '../Images/references/DEMIRAGLAR.jpg';
+import GUNEY_CELIK from '../Images/references/guneycelik.png';
+import KOLIN from '../Images/references/kolin.jpg';
+import OTIS from '../Images/references/OTIS.jpg';
+import OYAK from '../Images/references/OYAK.jpg';
+import PAMUK_ELEKTRIK from '../Images/references/pamukelektrik.png';
+import PIONEER from '../Images/references/PIONEER.jpg';
+import WAVIN_PILSA from '../Images/references/wavinpilsa.jpg';
+import YUREGIR_BELEDIYESI from '../Images/references/yuregirbelediyesi.png';
 
 const references = [
   { name: 'OTIS', industry: 'Çelik & Metal', image: OTIS },
