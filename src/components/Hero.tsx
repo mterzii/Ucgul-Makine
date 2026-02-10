@@ -1,4 +1,6 @@
 import { ChevronDown } from 'lucide-react';
+import { Link } from "react-router-dom";
+
 
 const Hero = () => {
   return (
@@ -26,19 +28,21 @@ const Hero = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="#services"
-            className="px-8 py-3.5 border-2 border-white text-white rounded-md hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold text-center"
-          >
-            HİZMETLERİMİZ
-          </a>
-          <a
-            href="#contact"
-            className="px-8 py-3.5 bg-orange-500 hover:bg-orange-600 text-white rounded-md transition-all duration-300 font-semibold shadow-lg hover:shadow-xl text-center"
-          >
-            BİZE ULAŞIN
-          </a>
-        </div>
+  <Link
+    to="/services"
+    className="px-8 py-3.5 border-2 border-white text-white rounded-md hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold text-center"
+  >
+    HİZMETLERİMİZ
+  </Link>
+
+  <Link
+    to="/contact"
+    className="px-8 py-3.5 bg-orange-500 hover:bg-orange-600 text-white rounded-md transition-all duration-300 font-semibold shadow-lg hover:shadow-xl text-center"
+  >
+    BİZE ULAŞIN
+  </Link>
+</div>
+
       </div>
 
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">

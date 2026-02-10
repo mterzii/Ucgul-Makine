@@ -180,6 +180,7 @@ const StatsSection = () => {
 }
 
 const Hero = () => {
+  const navigate = useNavigate();
   const { scrollY } = useScroll()
   const y = useTransform(scrollY, [0, 500], [0, 200])
   const opacity = useTransform(scrollY, [0, 300], [1, 0])
@@ -326,28 +327,24 @@ const child: Variants = {
             className="flex flex-col sm:flex-row gap-6 justify-center w-full sm:w-auto"
           >
             <motion.button
-              whileHover={{
-                scale: 1.05,
-              }}
-              whileTap={{
-                scale: 0.95,
-              }}
-              className="px-8 py-4 bg-transparent border-2 border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 hover:border-white transition-all duration-300 backdrop-blur-sm flex items-center justify-center gap-2"
-            >
-              HİZMETLERİMİZ
-            </motion.button>
-            <motion.button
-              whileHover={{
-                scale: 1.05,
-              }}
-              whileTap={{
-                scale: 0.95,
-              }}
-              className="px-8 py-4 bg-[#E8612D] text-white font-semibold rounded-lg hover:bg-[#d55626] shadow-lg shadow-[#E8612D]/30 transition-all duration-300 flex items-center justify-center gap-2 group"
-            >
-              BİZE ULAŞIN
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </motion.button>
+  whileHover={{ scale: 1.05 }}
+  whileTap={{ scale: 0.95 }}
+  onClick={() => navigate("/services")}
+  className="px-8 py-4 bg-transparent border-2 border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 hover:border-white transition-all duration-300 backdrop-blur-sm flex items-center justify-center gap-2"
+>
+  HİZMETLERİMİZ
+</motion.button>
+
+<motion.button
+  whileHover={{ scale: 1.05 }}
+  whileTap={{ scale: 0.95 }}
+  onClick={() => navigate("/contact")}
+  className="px-8 py-4 bg-[#E8612D] text-white font-semibold rounded-lg hover:bg-[#d55626] shadow-lg shadow-[#E8612D]/30 transition-all duration-300 flex items-center justify-center gap-2 group"
+>
+  BİZE ULAŞIN
+  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+</motion.button>
+
           </motion.div>
         </div>
       </div>

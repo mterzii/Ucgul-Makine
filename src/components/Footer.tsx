@@ -14,7 +14,8 @@ const Footer = () => {
 </div>
 
           <div className="text-gray-400 text-sm text-center md:text-left">
-            Copyright © 2026 icersin ücgül
+            © 2026 3Gül Makine. Tüm hakları saklıdır.
+
           </div>
         </div>
       </div>
