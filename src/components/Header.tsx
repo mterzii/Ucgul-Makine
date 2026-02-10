@@ -1,7 +1,7 @@
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import UcgulLogo from '../Images/UcgulLogo.png';
+import UcgulLogo from "../images/UcgulLogo.png";
 
 
 const Header = () => {

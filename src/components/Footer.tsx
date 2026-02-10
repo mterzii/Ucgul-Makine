@@ -1,5 +1,5 @@
 import { Factory } from 'lucide-react';
-import UcgulLogo from '../Images/UcgulLogo.png';
+import UcgulLogo from "../images/UcgulLogo.png";
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white py-8">
