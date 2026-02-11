@@ -17,14 +17,33 @@ const VisionMissionPage = () => {
     'Sosyal sorumluluğu göz önünde tutarak faaliyet göstermek',
   ];
 
-  const values = [
-    { title: 'Kalite', description: 'En yüksek standartta ürün ve hizmet' },
-    { title: 'Güvenilirlik', description: 'Sözümüzde duran, zamanında teslimat' },
-    { title: 'İnovasyon', description: 'Sürekli gelişim ve teknoloji takibi' },
-    { title: 'İşbirliği', description: 'Müşteri ve çalışanlarla güçlü ilişkiler' },
-    { title: 'Sorumluluk', description: 'Çevre ve topluma karşı duyarlılık' },
-    { title: 'Başarı', description: 'Birlikte hedeflerimize ulaşma' },
-  ];
+ const values = [
+  { 
+    title: 'Kalite', 
+    description: 'Ulusal ve uluslararası standartlara uygun, disiplinli ve sürdürülebilir üretim anlayışıyla çalışırız.' 
+  },
+  { 
+    title: 'Güvenilirlik', 
+    description: 'Taahhüt ettiğimiz şartname ve teslim sürelerine bağlı kalır, uzun vadeli güven inşa ederiz.' 
+  },
+  { 
+    title: 'İnovasyon', 
+    description: 'Teknolojiyi yakından takip eder, verimli ve modern mühendislik çözümleri üretiriz.' 
+  },
+  { 
+    title: 'İşbirliği', 
+    description: 'Müşterilerimizle karşılıklı güvene dayalı, stratejik iş ortaklıkları kurarız.' 
+  },
+  { 
+    title: 'Sorumluluk', 
+    description: 'İş güvenliği, etik değerler ve çevresel sürdürülebilirliği öncelik kabul ederiz.' 
+  },
+  { 
+    title: 'Başarı', 
+    description: 'Uzman kadro ve operasyonel disiplin ile sürdürülebilir başarı hedefleriz.' 
+  },
+];
+
 
   const visionReveal = useScrollReveal({ direction: 'left', distance: 20, delay: 0 });
   const missionReveal = useScrollReveal({ direction: 'right', distance: 20, delay: 100 });
