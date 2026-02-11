@@ -106,10 +106,7 @@ const ServicesPage = () => {
                     <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-orange-500 transition-colors duration-300">{service.title}</h3>
                     <p className="text-gray-600 text-sm mb-6 group-hover:text-gray-700 transition-colors duration-300">{service.description}</p>
                     <div className="flex items-center gap-2 text-orange-500 group-hover:translate-x-2 transition-transform duration-300">
-                      <div className="w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center group-hover:bg-orange-500 group-hover:scale-110 transition-all duration-300">
-                        <ArrowRight size={16} className="group-hover:text-white transition-colors duration-300" />
-                      </div>
-                      <span className="text-sm font-semibold">DAHA FAZLA</span>
+                      
                     </div>
                   </div>
                 </div>
