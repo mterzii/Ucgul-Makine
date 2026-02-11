@@ -2,37 +2,75 @@
 <html lang="tr">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" href="./src/images/ucgul-logo.svg" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>
-      Üçgül Makina | Adana Özel Makine İmalatı, Konveyör ve CNC Hizmetleri
-    </title>
+    <!-- PRIMARY SEO -->
+    <title>Üçgül Makina – Özel Makine, Konveyör, CNC</title>
 
     <meta
       name="description"
-      content="Üçgül Makina, Adana’da özel makine üretimi, konveyör sistemleri, CNC kesim, lazer kaynak, çelik konstrüksiyon ve endüstriyel borulama çözümleri sunar."
+      content="Üçgül Makina, Adana Organize Sanayi Bölgesi'nde özel makine üretimi, konveyör sistemleri, CNC kesim, lazer kaynak, çelik konstrüksiyon ve endüstriyel borulama hizmetleri sunmaktadır."
     />
 
-    <meta name="robots" content="index,follow" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.3gulmakina.com/" />
+
+    <!-- KEYWORDS (Google çok umursamaz ama zararı yok) -->
+    <meta
+      name="keywords"
+      content="Adana makine imalatı, Adana OSB makine, özel makine üretimi, konveyör sistemleri Adana, CNC kesim Adana, lazer kaynak, endüstriyel borulama, çelik konstrüksiyon"
+    />
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Üçgül Makina | Adana Makine İmalatı" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Adana OSB Makine İmalatı | Üçgül Makina"
+    />
     <meta
       property="og:description"
-      content="Özel makine üretimi, konveyör sistemleri, CNC kesim ve endüstriyel çözümler."
+      content="Adana Organize Sanayi Bölgesi'nde özel makine üretimi ve endüstriyel çözümler."
     />
-    <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.3gulmakina.com/" />
     <meta property="og:image" content="https://www.3gulmakina.com/og.jpg" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content="https://www.3gulmakina.com/og.jpg" />
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/svg+xml" href="/src/images/ucgul-logo.svg" />
+
+    <!-- LOCAL BUSINESS SCHEMA -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Üçgül Makina",
+        "image": "https://www.3gulmakina.com/og.jpg",
+        "url": "https://www.3gulmakina.com/",
+        "telephone": "+90 212 213 12 13",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Adana",
+          "addressRegion": "Adana",
+          "addressCountry": "TR"
+        },
+        "areaServed": "Adana Organize Sanayi Bölgesi",
+        "description": "Adana OSB'de özel makine üretimi, konveyör sistemleri ve CNC hizmetleri sunan makine imalat firması.",
+        "sameAs": []
+      }
+    </script>
   </head>
 
   <body>
+    <!-- SEO HIDDEN TEXT (Google için bağlam sinyali) -->
+    <div style="display: none">
+      Üçgül Makina Adana Organize Sanayi Bölgesi'nde faaliyet gösteren özel
+      makine imalat firmasıdır. Adana OSB makine üretimi, konveyör sistemleri,
+      CNC kesim ve endüstriyel çözümler sunmaktadır.
+    </div>
+
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
