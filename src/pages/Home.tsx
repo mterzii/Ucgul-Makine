@@ -68,7 +68,7 @@ const AnimatedCounter = ({ from, to }: { from: number; to: number }) => {
   const nodeRef = useRef<HTMLSpanElement>(null)
   const inView = useInView(nodeRef, {
     once: true,
-    margin: '-100px',
+    amount: 0.3,
   })
 
   useEffect(() => {
@@ -128,7 +128,7 @@ const StatsSection = () => {
   ]
 
   return (
-    <section className="py-20 bg-[#111827] relative overflow-hidden">
+    <section className="py-20 bg-[#111827] relative overflow-hidden w-full">
       <div className="absolute inset-0 opacity-5">
         <div
           className="absolute inset-0"
@@ -139,8 +139,8 @@ const StatsSection = () => {
         ></div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 w-full">
           {stats.map((stat, index) => (
             <motion.div
               key={index}
@@ -213,7 +213,7 @@ const child: Variants = {
 
 
   return (
-    <div className="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden bg-[#0f172a] -mt-16">
+    <div className="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden bg-[#0f172a] -mt-16 w-full max-w-full">
       <motion.div
         style={{
           y,
@@ -456,8 +456,8 @@ const ServicesSection = () => {
   const duplicatedServices = [...services, ...services]
 
   return (
-    <section className="py-24 bg-gray-50 relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section className="py-24 bg-gray-50 relative overflow-hidden w-full">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -528,8 +528,8 @@ const ServicesSection = () => {
 
 const QualitySection = () => {
   return (
-    <section className="py-24 bg-white overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-24 bg-white overflow-hidden w-full">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="flex flex-col lg:flex-row items-center gap-16">
           <motion.div
             initial="hidden"
@@ -634,11 +634,11 @@ const CTABanner = () => {
     const navigate = useNavigate()
 
   return (
-    <section className="py-20 bg-[#111827] relative overflow-hidden">
+    <section className="py-20 bg-[#111827] relative overflow-hidden w-full">
       <div className="absolute inset-0 bg-gradient-to-r from-[#E8612D]/20 to-transparent opacity-30" />
       <div className="absolute -right-20 -top-20 w-96 h-96 bg-[#E8612D]/10 rounded-full blur-3xl" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           <motion.div
             initial={{
@@ -698,8 +698,8 @@ const CTABanner = () => {
 
 const ProjectsAndActivities = () => {
   return (
-    <section className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-24 bg-white w-full overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="flex flex-col lg:flex-row items-center gap-16 mb-32">
           <motion.div
             initial="hidden"
