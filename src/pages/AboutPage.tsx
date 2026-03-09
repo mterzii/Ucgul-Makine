@@ -1,6 +1,7 @@
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useScrollReveal } from '../hooks/useScrollReveal';
+import foundersImg from '../images/founders.jpeg';
 
 const AboutPage = () => {
   const infoCardReveal = useScrollReveal({ direction: 'up', distance: 20 });
@@ -43,10 +44,10 @@ const AboutPage = () => {
             </div>
             <div className="relative h-96 md:h-auto">
               <img
-                src="https://r.resimlink.com/b51RBlJ.jpg"
-                alt="3Gül Makine Kurucuları"
-                className="w-full h-full object-cover"
-              />
+  src={foundersImg}
+  alt="Üçgül Makine Kurucuları"
+  className="w-full h-full object-cover"
+/>
             </div>
           </div>
         </div>

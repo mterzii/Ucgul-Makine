@@ -491,36 +491,33 @@ const ServicesSection = () => {
         </motion.div>
 
         <div className="relative">
-          <div className="overflow-hidden">
-            <motion.div
-              animate={{
-                x: [0, '-50%'],
-              }}
-              transition={{
-                x: {
-                  repeat: Infinity,
-                  repeatType: 'loop',
-                  duration: 10,
-                  ease: 'linear',
-                },
-              }}
-              className="flex gap-6"
-            >
-              {duplicatedServices.map((service, index) => (
-                <div
-                  key={index}
-                  className="w-[280px] flex-shrink-0"
-                >
-                  <FeatureCard
-                    icon={service.icon}
-                    title={service.title}
-                    desc={service.desc}
-                  />
-                </div>
-              ))}
-            </motion.div>
-          </div>
+  <div className="overflow-hidden">
+    <motion.div
+      animate={{
+        x: [0, '-50%'],
+      }}
+      transition={{
+        x: {
+          repeat: Infinity,
+          repeatType: 'loop',
+          duration: 20,
+          ease: 'linear',
+        },
+      }}
+      className="flex gap-6 w-max"
+    >
+      {duplicatedServices.map((service, index) => (
+        <div key={index} className="w-[320px] flex-shrink-0">
+          <FeatureCard
+            icon={service.icon}
+            title={service.title}
+            desc={service.desc}
+          />
         </div>
+      ))}
+    </motion.div>
+  </div>
+</div>
       </div>
     </section>
   )
