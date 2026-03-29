@@ -1,4 +1,3 @@
-
 # Makine İmalat Web Sitesi
 
 <img width="1906" height="917" alt="image" src="https://github.com/user-attachments/assets/d625e19b-2aad-4f19-87aa-2b16e52db3d7" />
@@ -10,9 +9,7 @@
 <img width="1903" height="915" alt="image" src="https://github.com/user-attachments/assets/1e9c8f85-c4e0-4d29-9499-54ad7c465203" />
 <img width="1905" height="917" alt="image" src="https://github.com/user-attachments/assets/80913bc1-afdf-4058-8d26-5156c494a4c2" />
 
-
 Modern, profesyonel makine imalat firması web sitesi. React + TypeScript + Vite + Supabase ile geliştirilmiştir.
-
 
 ## Özellikler
 
@@ -36,8 +33,6 @@ Modern, profesyonel makine imalat firması web sitesi. React + TypeScript + Vite
 - Lucide React (Icons)
 - EmailJS
 
-
-
 ```
 
 ## Lisans
@@ -52,7 +47,7 @@ Admin paneli sayesinde firma yetkilileri faaliyet alanlarını, içerikleri ve s
 
 İletişim formu doğrudan e-posta entegrasyonu ile çalışır ve müşteri taleplerinin hızlı şekilde firmaya ulaşmasını sağlar.
 
-Bu proje; sanayi, üretim ve makine imalat sektöründe faaliyet gösteren firmalar için modern, sürdürülebilir ve ölçeklenebilir bir web altyapısı sunar.
+Bu proje; sanayi, üretim ve makine imalat sektöründe faaliyet gösteren firmalar için modern, sürdürülebilir ve ölçeklenebilir bir web altyapısı sunar...
 
 
 
@@ -62,3 +57,4 @@ Bu proje; sanayi, üretim ve makine imalat sektöründe faaliyet gösteren firma
 
 
 
+```
